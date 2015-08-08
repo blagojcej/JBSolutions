@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyResourceProvider.cs" />
+    <Compile Include="AssemblyResourceVirtualFile.cs" />
     <Compile Include="Bootstrapping\Bootstrapper.cs" />
     <Compile Include="MEFControllerFactory.cs" />
     <Compile Include="MEFDependencyResolver.cs" />
