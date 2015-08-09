@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBSolutions.Common.Web", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBSolutions.Common.Contracts", "Common\JBSolutions.Common.Contracts\JBSolutions.Common.Contracts.csproj", "{FD9C0157-A4DB-4F37-9028-3C8A83AEB979}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestApps", "TestApps", "{2905F7FF-FD83-46C4-AF60-8D86E652CD78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicRazorMVCTest", "TestApps\BasicRazorMVCTest\BasicRazorMVCTest.csproj", "{2F05C869-A646-4206-A4F9-49B3C30F8BC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,10 @@ Global
 		{FD9C0157-A4DB-4F37-9028-3C8A83AEB979}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD9C0157-A4DB-4F37-9028-3C8A83AEB979}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD9C0157-A4DB-4F37-9028-3C8A83AEB979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F05C869-A646-4206-A4F9-49B3C30F8BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F05C869-A646-4206-A4F9-49B3C30F8BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F05C869-A646-4206-A4F9-49B3C30F8BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F05C869-A646-4206-A4F9-49B3C30F8BC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,5 +43,6 @@ Global
 		{7DB765E5-514D-4EC1-BD72-D712E7341815} = {39218A45-6A75-42E2-98F9-766E6EFDE4A2}
 		{5A1318C8-F1A9-4CFB-9F45-6D1FBD68CEF1} = {39218A45-6A75-42E2-98F9-766E6EFDE4A2}
 		{FD9C0157-A4DB-4F37-9028-3C8A83AEB979} = {39218A45-6A75-42E2-98F9-766E6EFDE4A2}
+		{2F05C869-A646-4206-A4F9-49B3C30F8BC4} = {2905F7FF-FD83-46C4-AF60-8D86E652CD78}
 	EndGlobalSection
 EndGlobal
