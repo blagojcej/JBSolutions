@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
+﻿using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
-using System.Web.Routing;
+using BasicRazorMVCTest.Infrastructure;
+using JBSolutions.Common.Web;
 
 namespace BasicRazorMVCTest
 {
@@ -20,7 +17,11 @@ namespace BasicRazorMVCTest
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            //RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            Bootstrapper.SetContainerFactory(new DefaultCompositionContainerFactory());
+            Bootstrapper.Run();
+
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
