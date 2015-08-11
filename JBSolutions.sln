@@ -13,6 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestApps", "TestApps", "{29
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicRazorMVCTest", "TestApps\BasicRazorMVCTest\BasicRazorMVCTest.csproj", "{2F05C869-A646-4206-A4F9-49B3C30F8BC4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{F6DD5DF2-F50C-4D15-826D-49437C2833E0}"
+	ProjectSection(SolutionItems) = preProject
+		Libraries\Microsoft.Practices.ServiceLocation.dll = Libraries\Microsoft.Practices.ServiceLocation.dll
+		Libraries\Microsoft.Practices.Unity.dll = Libraries\Microsoft.Practices.Unity.dll
+		Libraries\Microsoft.Practices.Unity.ServiceLocatorAdapter.dll = Libraries\Microsoft.Practices.Unity.ServiceLocatorAdapter.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

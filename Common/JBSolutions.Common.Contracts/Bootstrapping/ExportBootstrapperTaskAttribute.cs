@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 
-namespace JBSolutions.Common.Web.Contracts
+namespace JBSolutions.Common.Web.Contracts.Bootstrapping
 {
     /// <summary>
     /// Marks the target class as an exportable bootstrapper task.

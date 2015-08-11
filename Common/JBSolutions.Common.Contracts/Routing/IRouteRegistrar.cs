@@ -1,6 +1,6 @@
 ﻿using System.Web.Routing;
 
-namespace JBSolutions.Common.Web.Contracts
+namespace JBSolutions.Common.Web.Contracts.Routing
 {
     /// <summary>
     /// Defines the required contract for implementing a route registrar.

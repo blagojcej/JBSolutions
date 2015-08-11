@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.Composition.Hosting;
 
-namespace JBSolutions.Common.Web.Contracts
+namespace JBSolutions.Common.Web.Contracts.Bootstrapping
 {
     /// <summary>
     /// Defines the required contract for implementing a bootstrapper task.

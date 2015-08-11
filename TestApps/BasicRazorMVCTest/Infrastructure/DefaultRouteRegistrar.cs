@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 using JBSolutions.Common;
-using JBSolutions.Common.Web.Contracts;
+using JBSolutions.Common.Web.Contracts.Routing;
 
 namespace BasicRazorMVCTest.Infrastructure
 {

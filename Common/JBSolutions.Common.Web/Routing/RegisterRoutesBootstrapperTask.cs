@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.Composition.Hosting;
 using System.Linq;
 using System.Web.Routing;
-using JBSolutions.Common.Web.Contracts;
+using JBSolutions.Common.Web.Contracts.Bootstrapping;
 
 namespace JBSolutions.Common.Web
 {
