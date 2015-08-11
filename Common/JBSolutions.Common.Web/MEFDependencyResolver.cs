@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
-using System.Web.Mvc;
+using System.Web.Http.Dependencies;
 
 namespace JBSolutions.Common.Web
 {
@@ -69,6 +69,16 @@ namespace JBSolutions.Common.Web
             {
                 return null;
             }
+        }
+
+        public IDependencyScope BeginScope()
+        {
+            return this;
+        }
+
+        public void Dispose()
+        {
+            ;
         }
         #endregion
     }
