@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JBSolutions.Common.Web {
+namespace JBSolutions.Common.Web.Resources {
     using System;
     
     

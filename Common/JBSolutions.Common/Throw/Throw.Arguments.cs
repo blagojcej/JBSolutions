@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using JBSolutions.Common.Resources;
 
 namespace JBSolutions.Common
 {

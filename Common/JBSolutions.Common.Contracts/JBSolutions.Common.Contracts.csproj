@@ -58,13 +58,6 @@
     <Compile Include="Web\IActionVerbMetadata.cs" />
     <Compile Include="Web\IControllerMetadata.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\JBSolutions.Common\JBSolutions.Common.csproj">
-      <Project>{7db765e5-514d-4ec1-bd72-d712e7341815}</Project>
-      <Name>JBSolutions.Common</Name>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

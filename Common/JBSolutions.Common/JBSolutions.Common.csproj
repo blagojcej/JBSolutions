@@ -35,6 +35,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,6 +46,17 @@
   <ItemGroup>
     <Compile Include="Collections\DependencyList.cs" />
     <Compile Include="Collections\DependencyListNode.cs" />
+    <Compile Include="Composition\Composer.cs" />
+    <Compile Include="Composition\ConcurrentCache.cs" />
+    <Compile Include="Composition\DynamicInstantiationExportProvider.cs" />
+    <Compile Include="Composition\PartFactoryImport.cs" />
+    <Compile Include="Composition\PartFactoryOfT.cs" />
+    <Compile Include="Composition\PartFactoryOfTAndTMetadata.cs" />
+    <Compile Include="Composition\PartLifetimeContext.cs" />
+    <Compile Include="Composition\TaggedExportsChangeEventArgs.cs" />
+    <Compile Include="Configuration\CatalogConfigurationElement.cs" />
+    <Compile Include="Configuration\CatalogConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\CompositionConfigurationSection.cs" />
     <Compile Include="CSLExportProvider.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
@@ -68,6 +80,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>StringResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JBSolutions.Common.Contracts\JBSolutions.Common.Contracts.csproj">
+      <Project>{fd9c0157-a4db-4f37-9028-3c8a83aeb979}</Project>
+      <Name>JBSolutions.Common.Contracts</Name>
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

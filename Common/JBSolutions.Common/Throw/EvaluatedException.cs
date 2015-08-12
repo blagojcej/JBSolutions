@@ -1,4 +1,5 @@
 ﻿using System;
+using JBSolutions.Common.Resources;
 
 namespace JBSolutions.Common
 {

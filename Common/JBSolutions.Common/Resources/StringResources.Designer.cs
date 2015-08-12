@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JBSolutions.Common {
+namespace JBSolutions.Common.Resources {
     using System;
     
     
@@ -106,6 +106,15 @@ namespace JBSolutions.Common {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The import type &apos;{0}&apos; is not supported..
+        /// </summary>
+        internal static string ImportTypeNotSupported {
+            get {
+                return ResourceManager.GetString("ImportTypeNotSupported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The index cannot be less than 0..
         /// </summary>
         internal static string IndexLessThanZero {
@@ -156,6 +165,15 @@ namespace JBSolutions.Common {
         internal static string Pager_InvalidPageSize {
             get {
                 return ResourceManager.GetString("Pager_InvalidPageSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The property &apos;{0}&apos; cannot be null..
+        /// </summary>
+        internal static string PropertyCannotBeNull {
+            get {
+                return ResourceManager.GetString("PropertyCannotBeNull", resourceCulture);
             }
         }
     }

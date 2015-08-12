@@ -132,6 +132,9 @@
   <data name="EvaluatedException" xml:space="preserve">
     <value>An exception of type '{0}' could not be thrown because that exception type does not define a public constructor that takes a single string argument.  The original message was: {1}.</value>
   </data>
+  <data name="ImportTypeNotSupported" xml:space="preserve">
+    <value>The import type '{0}' is not supported.</value>
+  </data>
   <data name="IndexLessThanZero" xml:space="preserve">
     <value>The index cannot be less than 0.</value>
   </data>
@@ -149,5 +152,8 @@
   </data>
   <data name="Pager_InvalidPageSize" xml:space="preserve">
     <value>{0} is not a valid page size.</value>
+  </data>
+  <data name="PropertyCannotBeNull" xml:space="preserve">
+    <value>The property '{0}' cannot be null.</value>
   </data>
 </root>

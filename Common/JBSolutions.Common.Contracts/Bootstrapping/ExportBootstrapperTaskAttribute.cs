@@ -18,7 +18,8 @@ namespace JBSolutions.Common.Web.Contracts.Bootstrapping
         public ExportBootstrapperTaskAttribute(string name, params string[] dependencies)
             : base(typeof(IBootstrapperTask))
         {
-            Throw.IfArgumentNullOrEmpty(name, "name");
+            //Throw.IfArgumentNullOrEmpty(name, "name");
+            throw new Exception("Parameter Name can not be null or empty!");
 
             Dependencies = dependencies;
             Name = name;

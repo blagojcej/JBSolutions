@@ -78,6 +78,26 @@ namespace JBSolutions.Common
 
             throw exception;
         }
+
+        /// <summary>
+        /// Throws a <see cref="InvalidOperationException" /> with the specified message.
+        /// </summary>
+        /// <param name="message">The message to throw.</param>
+        /// <param name="modifier">A modifier delegate used to modify the exception before being thrown.</param>
+        public static void InvalidOperation(string message, Func<Exception, Exception> modifier = null)
+        {
+            ThrowInternal(new InvalidOperationException(message), modifier);
+        }
+
+        /// <summary>
+        /// Throws a <see cref="NotSupportedException" /> with the specified message.
+        /// </summary>
+        /// <param name="message">The message to throw.</param>
+        /// <param name="modifier">A modifier delegate used to modify the exception before being thrown.</param>
+        public static void NotSupported(string message, Func<Exception, Exception> modifier = null)
+        {
+            ThrowInternal(new NotSupportedException(message), modifier);
+        }
         #endregion
     }
 }

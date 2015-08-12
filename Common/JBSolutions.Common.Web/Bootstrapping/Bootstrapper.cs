@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using JBSolutions.Common.Collections;
 using JBSolutions.Common.Web.Contracts;
 using JBSolutions.Common.Web.Contracts.Bootstrapping;
+using JBSolutions.Common.Web.Resources;
 
 namespace JBSolutions.Common.Web
 {
