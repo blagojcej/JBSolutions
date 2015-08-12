@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using System.ComponentModel.Composition.Hosting;
 using System.Linq;
 using System.Web.Mvc;
-using System.Web.Routing;
-using JBSolutions.Common.Web.Contracts;
+using JBSolutions.Common.Composition;
+using JBSolutions.Common.Web.Contracts.Web;
 
 namespace JBSolutions.Common.Web
 {
@@ -14,6 +14,36 @@ namespace JBSolutions.Common.Web
     [Export(typeof(IControllerFactory))]
     public class MEFControllerFactory : DefaultControllerFactory
     {
+        #region Fields
+#pragma warning disable 649
+        [ImportMany]
+        private IEnumerable<PartFactory<IController, IControllerMetadata>> ControllerFactories;
+#pragma warning restore 649
+        #endregion
+
+        #region Methods
+        /// <summary>
+        /// Creates an instance of a controller for the specified name.
+        /// </summary>
+        /// <param name="requestContext">The current request context.</param>
+        /// <param name="controllerName">The name of the controller.</param>
+        /// <returns>An instance of a controller for the specified name.</returns>
+        public override IController CreateController(System.Web.Routing.RequestContext requestContext, string controllerName)
+        {
+            var factory = ControllerFactories
+                .Where(f => f.Metadata.Name.Equals(controllerName, StringComparison.InvariantCultureIgnoreCase))
+                .FirstOrDefault();
+
+            if (factory != null)
+                return factory.CreatePart();
+
+            return base.CreateController(requestContext, controllerName);
+        }
+        #endregion
+
+        #region Old MEFControllerFactory Code
+        
+        /*
         #region Fields
         private readonly CompositionContainer container;
         #endregion
@@ -52,5 +82,8 @@ namespace JBSolutions.Common.Web
             return controller ?? base.CreateController(requestContext, controllerName);
         }
         #endregion
+        */
+
+        #endregion Old MEFControllerFactory Code
     }
 }

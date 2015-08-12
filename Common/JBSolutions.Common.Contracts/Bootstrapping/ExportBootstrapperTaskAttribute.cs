@@ -19,7 +19,8 @@ namespace JBSolutions.Common.Web.Contracts.Bootstrapping
             : base(typeof(IBootstrapperTask))
         {
             //Throw.IfArgumentNullOrEmpty(name, "name");
-            throw new Exception("Parameter Name can not be null or empty!");
+            if (string.IsNullOrEmpty(name) || string.IsNullOrWhiteSpace(name))
+                throw new Exception("Parameter Name can not be null or empty!");
 
             Dependencies = dependencies;
             Name = name;

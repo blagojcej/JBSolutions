@@ -9,10 +9,16 @@ namespace JBSolutions.Common.Web.Contracts.Routing
     {
         #region Methods
         /// <summary>
-        /// Registers any required routes.
+        /// Registers any routes to be ignored by the routing system.
         /// </summary>
-        /// <param name="route">The route collection to register routes with.</param>
-        void RegisterRoutes(RouteCollection route);
+        /// <param name="routes">The collection of routes to add to.</param>
+        void RegisterIgnoreRoutes(RouteCollection routes);
+
+        /// <summary>
+        /// Registers any routes to be used by the routing system.
+        /// </summary>
+        /// <param name="routes">The collection of routes to add to.</param>
+        void RegisterRoutes(RouteCollection routes);
         #endregion
     }
 }

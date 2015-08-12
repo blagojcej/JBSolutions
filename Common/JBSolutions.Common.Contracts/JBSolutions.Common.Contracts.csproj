@@ -53,6 +53,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\ExportRegistrarAttribute.cs" />
     <Compile Include="Routing\IRouteRegistrar.cs" />
+    <Compile Include="Routing\IRouteRegistrarMetadata.cs" />
     <Compile Include="Web\ExportControllerAttribute.cs" />
     <Compile Include="Web\IActionVerb.cs" />
     <Compile Include="Web\IActionVerbMetadata.cs" />

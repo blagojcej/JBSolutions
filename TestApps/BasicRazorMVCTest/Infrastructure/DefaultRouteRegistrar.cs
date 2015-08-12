@@ -1,35 +1,35 @@
-﻿using System.Web.Mvc;
+﻿using System.ComponentModel.Composition;
+using System.Web.Mvc;
 using System.Web.Routing;
-using JBSolutions.Common;
 using JBSolutions.Common.Web.Contracts.Routing;
 
 namespace BasicRazorMVCTest.Infrastructure
 {
     /// <summary>
-    /// Registers the default routes.
+    /// Registers the default MVC routes.
     /// </summary>
-    [ExportRegistrar]
+    [Export(typeof(IRouteRegistrar)), ExportMetadata("Order", 100)]
     public class DefaultRouteRegistrar : IRouteRegistrar
     {
         #region Methods
         /// <summary>
-        /// Registers the routes.
+        /// Registers any routes to be ignored by the routing system.
         /// </summary>
-        /// <param name="routes">The routes.</param>
-        public void RegisterRoutes(RouteCollection routes)
+        /// <param name="routes">The collection of routes to add to.</param>
+        public void RegisterIgnoreRoutes(RouteCollection routes)
         {
-            Throw.IfArgumentNull(routes, "routes");
-
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.IgnoreRoute("{resource}.ico/{*pathInfo}");
+        }
 
-            routes.MapRoute(
-                "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
-            );
+        /// <summary>
+        /// Registers any routes to be used by the routing system.
+        /// </summary>
+        /// <param name="routes">The collection of routes to add to.</param>
+        public void RegisterRoutes(RouteCollection routes)
+        {
+            routes.MapRoute("Default", "{controller}/{action}", new { controller = "Home", action = "Index" });
         }
         #endregion
-
     }
 }
