@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.Web.Hosting;
 using System.Web.Mvc;
 using System.Web.Routing;
 using JBSolutions.Common.Composition;
@@ -59,6 +60,9 @@ namespace JBSolutions.Common.Web
 
             // Set the view engine that supports imported areas.
             //ViewEngines.Engines.Add(new AreaViewEngine());
+
+            //Register custom Virtual Path Provider which reads embedded views and resources
+            HostingEnvironment.RegisterVirtualPathProvider(new AssemblyResourceProvider());
 
             // Initialises the application.
             Initialise();
