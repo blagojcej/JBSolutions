@@ -105,7 +105,7 @@ namespace JBSolutions.Common.Web
 
             GetDirectoryCatalogs(MapPath("~/bin")).ForEach(catalog => list.Add(catalog));
 
-            GetDirectoryCatalogs(MapPath("~/Areas")).ForEach(catalog =>
+            GetDirectoryCatalogs(MapPath("~/Plugins")).ForEach(catalog =>
             {
                 list.Add(catalog);
                 RegisterPath(catalog.FullPath);
