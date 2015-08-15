@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{
 		Libraries\Microsoft.Practices.Unity.ServiceLocatorAdapter.dll = Libraries\Microsoft.Practices.Unity.ServiceLocatorAdapter.dll
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCTestApp", "TestApps\MVCTestApp\MVCTestApp.csproj", "{55E164EC-BED3-47E4-88D7-6D226733B996}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{FD9C0157-A4DB-4F37-9028-3C8A83AEB979}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD9C0157-A4DB-4F37-9028-3C8A83AEB979}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD9C0157-A4DB-4F37-9028-3C8A83AEB979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55E164EC-BED3-47E4-88D7-6D226733B996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E164EC-BED3-47E4-88D7-6D226733B996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E164EC-BED3-47E4-88D7-6D226733B996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E164EC-BED3-47E4-88D7-6D226733B996}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,5 +50,6 @@ Global
 		{7DB765E5-514D-4EC1-BD72-D712E7341815} = {39218A45-6A75-42E2-98F9-766E6EFDE4A2}
 		{5A1318C8-F1A9-4CFB-9F45-6D1FBD68CEF1} = {39218A45-6A75-42E2-98F9-766E6EFDE4A2}
 		{FD9C0157-A4DB-4F37-9028-3C8A83AEB979} = {39218A45-6A75-42E2-98F9-766E6EFDE4A2}
+		{55E164EC-BED3-47E4-88D7-6D226733B996} = {2905F7FF-FD83-46C4-AF60-8D86E652CD78}
 	EndGlobalSection
 EndGlobal

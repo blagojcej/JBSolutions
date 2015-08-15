@@ -11,7 +11,8 @@ namespace JBSolutions.Common.Web
     /// <summary>
     /// Creates instances of <see cref="IController"/> from exported parts.
     /// </summary>
-    [Export(typeof(IControllerFactory))]
+    //[Export(typeof(IControllerFactory))]
+    [Export]
     public class MEFControllerFactory : DefaultControllerFactory
     {
         #region Fields
