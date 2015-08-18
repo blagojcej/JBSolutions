@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace MVCPlugin1
@@ -12,6 +8,7 @@ namespace MVCPlugin1
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.IgnoreRoute("{*staticfile}", new {staticfile = @".*\.(css|js|gif|jpg|png)(/.*)?"});
 
             routes.MapRoute(
                 name: "Default",

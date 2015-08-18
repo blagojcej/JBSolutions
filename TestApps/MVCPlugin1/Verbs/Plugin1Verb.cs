@@ -32,7 +32,7 @@ namespace MVCPlugin1.Verbs
         /// </summary>
         public string Controller
         {
-            get { return "Home"; }
+            get { return "MVCPlugin1"; }
         }
         #endregion
     }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Web.WebPages.OAuth;
-using MVCPlugin1.Models;
-
+﻿
 namespace MVCPlugin1
 {
     public static class AuthConfig

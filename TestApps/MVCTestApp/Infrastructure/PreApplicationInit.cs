@@ -54,25 +54,25 @@ namespace MVCTestApp.Infrastructure
 
             // * This will put the plugin assemblies in the 'Load' context
             // This works but requires a 'probing' folder be defined in the web.config
-            foreach (var a in
-                ShadowCopyFolder
-                .GetFiles("*.dll", SearchOption.AllDirectories)
-                .Select(x => AssemblyName.GetAssemblyName(x.FullName))
-                .Select(x => Assembly.Load(x.FullName)))
-            {
-                BuildManager.AddReferencedAssembly(a);
-            }
+            //foreach (var a in
+            //    ShadowCopyFolder
+            //    .GetFiles("*.dll", SearchOption.AllDirectories)
+            //    .Select(x => AssemblyName.GetAssemblyName(x.FullName))
+            //    .Select(x => Assembly.Load(x.FullName)))
+            //{
+            //    BuildManager.AddReferencedAssembly(a);
+            //}
 
             // * This will put the plugin assemblies in the 'LoadFrom' context
             // This works but requires a 'probing' folder be defined in the web.config
             // This is the slowest and most error prone version of the Load contexts.            
-            //foreach (var a in
-            //    ShadowCopyFolder
-            //    .GetFiles("*.dll", SearchOption.AllDirectories)
-            //    .Select(plug => Assembly.LoadFrom(plug.FullName)))
-            //{
-            //    BuildManager.AddReferencedAssembly(a);
-            //}
+            foreach (var a in
+                ShadowCopyFolder
+                .GetFiles("*.dll", SearchOption.AllDirectories)
+                .Select(plug => Assembly.LoadFrom(plug.FullName)))
+            {
+                BuildManager.AddReferencedAssembly(a);
+            }
 
             // * This will put the plugin assemblies in the 'Neither' context ( i think )
             // This nearly works but fails during view compilation.
