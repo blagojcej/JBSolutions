@@ -316,7 +316,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\MVCPlugin1\Index.cshtml" />
+    <EmbeddedResource Include="Views\MVCPlugin1\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
