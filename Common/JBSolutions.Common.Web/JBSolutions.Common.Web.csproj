@@ -51,6 +51,7 @@
     <Compile Include="Bootstrapping\Bootstrapper.cs" />
     <Compile Include="MEFControllerFactory.cs" />
     <Compile Include="MEFDependencyResolver.cs" />
+    <Compile Include="PluginViewEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\StringResources.Designer.cs">
       <AutoGen>True</AutoGen>
