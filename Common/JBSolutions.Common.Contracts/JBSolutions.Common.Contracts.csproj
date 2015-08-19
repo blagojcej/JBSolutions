@@ -59,6 +59,7 @@
     <Compile Include="Web\IActionVerbMetadata.cs" />
     <Compile Include="Web\IControllerMetadata.cs" />
     <Compile Include="Web\IViewLocation.cs" />
+    <Compile Include="Web\IViewLocationMetadata.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

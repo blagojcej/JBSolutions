@@ -11,7 +11,9 @@ namespace MVCPlugin1.Controllers
 
         public ActionResult Index()
         {
-            ViewResult RenderedView = View("~/Plugins/Plugins/Temp/Plugins/MVCPlugin1.dll/MVCPlugin1.Views.MVCPlugin1.Index.cshtml");
+            //ViewResult RenderedView = View("~/Plugins/Plugins/Temp/Plugins/MVCPlugin1.dll/MVCPlugin1.Views.MVCPlugin1.Index.cshtml");
+            //ViewResult RenderedView = View("~/Plugins/Temp/Plugins/MVCPlugin1.dll/MVCPlugin1.Views.MVCPlugin1.Index.cshtml");
+            ViewResult RenderedView = View();
             return RenderedView;
         }
 

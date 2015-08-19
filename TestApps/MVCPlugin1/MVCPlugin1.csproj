@@ -190,6 +190,7 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="MVCPlugin1RouteRegistrar.cs" />
+    <Compile Include="MVCPlugin1ViewLocation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Verbs\Plugin1Verb.cs" />
   </ItemGroup>

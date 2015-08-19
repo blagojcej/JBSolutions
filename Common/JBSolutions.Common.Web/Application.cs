@@ -12,6 +12,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using JBSolutions.Common.Composition;
 using JBSolutions.Common.Configuration;
+using JBSolutions.Common.Contracts.Web;
 using JBSolutions.Common.Web.Contracts.Routing;
 using JBSolutions.Common.Web.Contracts.Web;
 
@@ -27,6 +28,8 @@ namespace JBSolutions.Common.Web
         [ImportMany]
         private IEnumerable<Lazy<IRouteRegistrar, IRouteRegistrarMetadata>> RouteRegistrars;
         private static IEnumerable<Lazy<IActionVerb, IActionVerbMetadata>> ActionVerbs;
+        [ImportMany]
+        private static IEnumerable<Lazy<IViewLocation, IViewLocationMetadata>> ViewLocations;
 
         [Import]
         private MEFControllerFactory ControllerFactory;
@@ -58,11 +61,14 @@ namespace JBSolutions.Common.Web
             // Set the controller factory.
             ControllerBuilder.Current.SetControllerFactory(ControllerFactory);
 
-            // Set the view engine that supports imported areas.
-            //ViewEngines.Engines.Add(new AreaViewEngine());
-
             //Register custom Virtual Path Provider which reads embedded views and resources
             HostingEnvironment.RegisterVirtualPathProvider(new AssemblyResourceProvider());
+
+            string[] viewLocations = GetPluginsViewLocations();
+            
+            // Set the view engine that supports imported areas.
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new PluginViewEngine(viewLocations));
 
             // Initialises the application.
             Initialise();
@@ -137,6 +143,23 @@ namespace JBSolutions.Common.Web
             return list;
         }
 
+        private string[] GetPluginsViewLocations()
+        {
+            string[] strViewLocations=new string[1000];
+
+            for (int i = 0; i < ViewLocations.Count(); i++)
+            {
+                strViewLocations[i] = ViewLocations.ElementAt(i).Value.ViewsPath;
+            }
+            //IEnumerable<IViewLocation> viewLocations = Composer.Container.GetExportedValues<IViewLocation>();
+
+            //for (int i = 0; i < viewLocations.Count(); i++)
+            //{
+            //    strViewLocations[i] = viewLocations.ElementAt(i).ViewsPath;
+            //}
+
+            return strViewLocations;
+        }
 
         /// <summary>
         /// Registers the specified path for probing.
@@ -165,6 +188,7 @@ namespace JBSolutions.Common.Web
             Composer.Compose(this);
 
             ActionVerbs = Composer.ResolveAll<IActionVerb, IActionVerbMetadata>();
+            ViewLocations = Composer.ResolveAll<IViewLocation, IViewLocationMetadata>();
         }
 
         /// <summary>

@@ -13,7 +13,7 @@ namespace MVCTestApp.Infrastructure
 
         static CustomRazorBuildProvider()
         {
-            string extensionsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Plugins");
+            string extensionsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Plugins\\Temp\\Plugins");
 
             _assemblies = Directory.GetFiles(extensionsPath, "*.dll")
                 .Select(Assembly.Load);
