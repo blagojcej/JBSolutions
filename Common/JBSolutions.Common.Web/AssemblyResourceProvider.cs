@@ -49,7 +49,7 @@ namespace JBSolutions.Common.Web
                 //string resourceName = parts[3];
                 string assemblyName = string.Format(@"{0}\{1}\{2}\{3}",
                                                     new object[] {parts[1], parts[2], parts[3], parts[4]});
-                string resourceName = parts[4];
+                string resourceName = parts[5];
 
                 //assemblyName = Path.Combine(HttpRuntime.BinDirectory, assemblyName);
                 assemblyName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, assemblyName);

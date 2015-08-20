@@ -12,7 +12,7 @@ namespace MVCPlugin2_ASPX
     {
         public string ViewsPath
         {
-            get { return "~/Plugins/Temp/Plugins/MVCPlugin2_ASPX.dll/MVCPlugin2_ASPX.Views.{1}.{0}.cshtml"; }
+            get { return "~/Plugins/Temp/Plugins/MVCPlugin2_ASPX.dll/MVCPlugin2_ASPX.Views.{1}.{0}.aspx"; }
         }
     }
 }

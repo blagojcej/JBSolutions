@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Reflection;
 using System.Web;
 using System.Web.Hosting;
@@ -37,10 +38,14 @@ namespace JBSolutions.Common.Web
         public override Stream Open()
         {
             string[] parts = path.Split('/');
-            string assemblyName = parts[2];
-            string resourceName = parts[3];
+            //string assemblyName = parts[2];
+            //string resourceName = parts[3];
+            string assemblyName = string.Format(@"{0}\{1}\{2}\{3}",
+                                    new object[] { parts[1], parts[2], parts[3], parts[4] });
+            string resourceName = parts[5];
 
-            assemblyName = Path.Combine(HttpRuntime.BinDirectory, assemblyName);
+            //assemblyName = Path.Combine(HttpRuntime.BinDirectory, assemblyName);
+            assemblyName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, assemblyName);
             byte[] assemblyBytes = File.ReadAllBytes(assemblyName);
             Assembly assembly = Assembly.Load(assemblyBytes);
             string assemblyNamespace = assembly.GetName().Name;
