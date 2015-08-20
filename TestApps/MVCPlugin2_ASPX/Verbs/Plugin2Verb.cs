@@ -35,7 +35,7 @@ namespace MVCPlugin2_ASPX.Verbs
         /// </summary>
         public string Controller
         {
-            get { return "MVCPlugin1"; }
+            get { return "MVCPlugin2"; }
         }
         #endregion
     }
