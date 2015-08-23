@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Composition;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.Composition;
 using JBSolutions.Common.Web.Contracts.Web;
 
 namespace MVCPlugin2_ASPX.Verbs
@@ -19,7 +15,7 @@ namespace MVCPlugin2_ASPX.Verbs
         /// </summary>
         public string Name
         {
-            get { return "Plugin 1"; }
+            get { return "Plugin 2"; }
         }
 
         /// <summary>

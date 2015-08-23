@@ -3,8 +3,8 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Threading;
 using System.Web.Mvc;
-using WebMatrix.WebData;
 using MVCPlugin2_ASPX.Models;
+using WebMatrix.WebData;
 
 namespace MVCPlugin2_ASPX.Filters
 {
